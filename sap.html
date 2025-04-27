@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .question {
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 10px auto;
+            width: 50%;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .answer {
+            display: none;
+            background: #ddd;
+            padding: 10px;
+            margin: 5px auto;
+            width: 50%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Quick Quiz</h2>
+
+    <div class="question" onclick="toggleAnswer('ans1')">
+        Q1: What is the capital of France?
+    </div>
+    <div class="answer" id="ans1">
+        A: Paris 🇫🇷
+    </div>
+
+    <div class="question" onclick="toggleAnswer('ans2')">
+        Q2: What is 5 + 7?
+    </div>
+    <div class="answer" id="ans2">
+        A: 12 ✅
+    </div>
+
+    <div class="question" onclick="toggleAnswer('ans3')">
+        Q3: Who developed Python?
+    </div>
+    <div class="answer" id="ans3">
+        A: Guido van Rossum 🐍
+    </div>
+
+    <script>
+        function toggleAnswer(id) {
+            var ans = document.getElementById(id);
+            if (ans.style.display === "none") {
+                ans.style.display = "block";
+            } else {
+                ans.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
